@@ -1,9 +1,16 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
-import { enableProdMode } from '@angular/core';
-import { AppComponent, environment } from './app/';
+import { bootstrap } from '@angular/platform-browser-dynamic'
+import { enableProdMode, ViewEncapsulation } from '@angular/core'
+import { AppComponent, environment } from './app/'
+import { CompilerConfig } from '@angular/compiler';
 
 if (environment.production) {
-  enableProdMode();
+  enableProdMode()
 }
 
-bootstrap(AppComponent);
+bootstrap(AppComponent, [
+  /*{
+    provide: CompilerConfig,
+    useValue: new CompilerConfig({defaultEncapsulation: ViewEncapsulation.Native})
+  }*/
+
+])

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AliasService } from '../alias.service';
+import { Input } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -9,10 +9,13 @@ import { AliasService } from '../alias.service';
 })
 export class AliasComponent implements OnInit {
 
-  constructor(private alias: AliasService) { }
+  @Input()
+  alias: Object
+
+  constructor() { }
 
   ngOnInit() {
-    console.log( this.alias.all() )
+    
   }
 
 }

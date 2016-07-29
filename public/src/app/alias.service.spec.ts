@@ -8,9 +8,9 @@ describe('Service: Alias', () => {
     addProviders([AliasService]);
   });
 
-  it('should ...',
+  /*it('should ...',
     inject([AliasService],
       (service: AliasService) => {
         expect(service).toBeTruthy();
-      }));
+      }));*/
 });

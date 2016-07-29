@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'hermanoRound';
+    src: url('app/font/hermano-alto-round.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hermanoStamp';
+    src: url('app/font/hermano-alto-stamp.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100italic,100,400italic,700,900);

@@ -1,0 +1,10 @@
+<span> {{aliases.length}} alias </span>
+
+<article *ngFor="let alias of aliases" >
+  <h2>{{alias.Alias}}</h2>
+  <h4>{{alias.Target}}</h4>
+  <p>{{alias.Description}}</p>
+  <span>{{alias.User}}</span>
+  <span>{{alias.Created}}</span>
+  <span>{{alias.Modified}}</span>
+</article>
