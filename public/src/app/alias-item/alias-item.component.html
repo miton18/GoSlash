@@ -1,0 +1,18 @@
+<h2>
+  {{ alias.Alias }}
+</h2>
+<h4>
+  {{ alias.Target }}
+</h4>
+<p>
+  {{ alias.Description }}
+</p>
+<span>
+  {{ alias.User}}
+</span>
+<span>
+  {{ alias.Created * 1000 | date: 'dd/MM/yy HH:mm'}}
+</span>
+<span>
+  {{ alias.Modified * 1000 | date: 'dd/MM/yy HH:mm'}}
+</span>
