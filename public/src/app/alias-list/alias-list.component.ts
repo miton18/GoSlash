@@ -8,7 +8,6 @@ import { AliasService } from '../alias.service';
   styleUrls: [
     'alias-list.component.css',
   ],
-  providers: [AliasService]
 })
 export class AliasListComponent implements OnInit {
 
@@ -20,6 +19,15 @@ export class AliasListComponent implements OnInit {
 
   ngOnInit() {
     this.aliases = this.aliasService.all()
-  }
 
+
+    let test = () => {
+
+    }
+
+  } 
+
+  get getAlias(): any {
+    return this.aliases[0]
+  }
 }

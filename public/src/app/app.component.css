@@ -1,4 +1,13 @@
 h1 {
+    margin: 0;
+
     font-family: 'hermanoStamp';
-    font-size: 5em;
+    font-size: 10em;
+    text-align: center;
+    color: #73cddc;
+}
+
+article {
+    width: 50%;
+    margin-left: 25%;
 }

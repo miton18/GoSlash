@@ -1,15 +1,9 @@
-
-
-
 :host {
-    
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
 
     font-family: 'Roboto';
-
-    background-color: rgb(250,250,250);
 }
 article {
 

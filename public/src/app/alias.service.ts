@@ -1,29 +1,46 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Injectable()
-export class AliasService {
+export class AliasService  {
 
-    constructor() { }
+    constructor(private http: Http) { }
+    all(): Array<any> {
+        return []
+    }
+}
+
+@Injectable()
+export class AliasServiceTest {
+
+    constructor(private http: Http) { }
 
     all(): Array<any> {
         return [
             {
-                Alias: "rfc",
-        	    Target:"http://docrcf.ss",    
+                Alias: "ddg",
+        	    Target:"https://duckduckgo.com/${1:+?q=$1}",    
         	    User:"rcoll",
-        	    Created:"date1",   
-        	    Modified:"date2",  
-        	    Description:"redirige vers la rfc...."
+        	    Created:"1392259631",   
+        	    Modified:"1392259634",  
+        	    Description:"blob"
             },
             {
-                Alias: "wiki",
-        	    Target:"http://wikipedia.ss",    
+                Alias: "google",
+        	    Target:"http://www.google.fr/${1:+#q=$1}",    
         	    User:"rcoll",
-        	    Created:"date1",   
-        	    Modified:"date2",  
+        	    Created:"1392259631",   
+        	    Modified:"1392259634",  
+        	    Description:"lorem ipsum"
+            },
+            {
+                Alias: "rfc",
+        	    Target:"http://tools.ietf.org/html/${1:+rfc}${1:+$1}",    
+        	    User:"rcoll",
+        	    Created:"1392259631",   
+        	    Modified:"1392259634",  
         	    Description:"redirige vers la wikipedia...."
             }
       ]
     }
-
 }
