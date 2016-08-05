@@ -1,7 +1,14 @@
 :host {
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+}
 
-    font-family: 'robotoRegular'
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form h2 {
+    margin: 0;
 }

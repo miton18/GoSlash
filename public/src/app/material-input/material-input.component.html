@@ -1,0 +1,18 @@
+
+<div class="container" *ngIf="inputType!='textarea'" >
+  <input 
+    [type]="inputType"
+    [(ngModel)]="value" 
+    name="{{name}}" 
+    [class.focus]="value.length != 0">
+<label>{{placeholder}}</label>
+</div>
+
+<div class="container" *ngIf="inputType==='textarea'" >
+  <textarea  
+    name="{{name}}"
+    [(ngModel)]="value" 
+    [class.focus]="value.length != 0" >
+  </textarea>
+  <label>{{placeholder}}</label>
+</div>    

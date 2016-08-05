@@ -1,3 +1,7 @@
+* {
+    font-family: 'robotoRegular'
+}
+
 h1 {
     margin: 0;
 
@@ -10,4 +14,26 @@ h1 {
 article {
     width: 50%;
     margin-left: 25%;
+    margin-bottom: 2rem;
+}
+
+footer {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2rem;
+    
+    background-color: #73cddc;
+}
+footer p {
+    margin: auto;
+    color: grey;
+}
+footer p a {
+    text-decoration: none;
+    color: grey;
 }

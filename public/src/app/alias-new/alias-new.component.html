@@ -1,0 +1,22 @@
+<form (ngSubmit)="save()" >
+
+  <h2>Create new alias</h2>
+  
+  <app-material-input 
+    [inputType]="'text'"  
+    [placeholder]="'Alias name'" >
+  </app-material-input>
+  
+  <app-material-input 
+    [inputType]="'text'"  
+    [placeholder]="'Alias target'">
+  </app-material-input>
+
+  <app-material-input 
+    [inputType]="'textarea'" 
+    [placeholder]="'Alias description'">
+  </app-material-input>
+
+  <button type="submit"></button>
+
+</form>

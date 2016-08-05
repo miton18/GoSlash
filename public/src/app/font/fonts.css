@@ -1,3 +1,4 @@
+/* Hermano */
 @font-face {
     font-family: 'hermanoRound';
     src: url('app/font/hermano-alto-round.ttf'); 
@@ -12,4 +13,94 @@
     font-style: normal;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100italic,100,400italic,700,900);
+/* Roboto */ 
+@font-face {
+    font-family: 'robotoBlack';
+    src: url('app/font/Roboto-Black.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoBlackItalic';
+    src: url('app/font/Roboto-BlackItalic.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoBold';
+    src: url('app/font/Roboto-Bold.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoBoldCondensed';
+    src: url('app/font/Roboto-BoldCondensed.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoBoldCondensedItalic';
+    src: url('app/font/Roboto-BoldCondensedItalic.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoBoldItalic';
+    src: url('app/font/Roboto-BoldItalic.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoCondensed';
+    src: url('app/font/Roboto-Condensed.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoCondensedItalic';
+    src: url('app/font/Roboto-CondensedItalic.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoItalic';
+    src: url('app/font/Roboto-Italic.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoLight';
+    src: url('app/font/Roboto-Light.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoLightItalic';
+    src: url('app/font/Roboto-LightItalic.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoMedium';
+    src: url('app/font/Roboto-Medium.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoMediumItalic';
+    src: url('app/font/Roboto-MediumItalic.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoRegular';
+    src: url('app/font/Roboto-Regular.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoRegularItalic';
+    src: url('app/font/Roboto-RegularItalic.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
