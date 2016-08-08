@@ -31,8 +31,8 @@ const APP_ROUTES: RouterConfig = [
     path: 'aliases', 
     component: AliasListComponent,
     canActivate: [AuthService] 
-  }
-  //{ path: '**', component: NotFoundComponent }    
+  },
+  { path: '**', component: AliasListComponent, canActivate: [AuthService] }    
 ];
 
 export const APP_ROUTER_PROVIDERS = [

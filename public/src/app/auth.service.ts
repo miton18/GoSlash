@@ -1,11 +1,12 @@
-import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { environment } from './environment';
+import { Injectable } from '@angular/core'
+import { Http, Response } from '@angular/http'
+import { environment } from './environment'
 import { 
   CanActivate, 
   CanDeactivate, 
   ActivatedRouteSnapshot, 
-  RouterStateSnapshot } from '@angular/router';
+  RouterStateSnapshot, 
+  Router } from '@angular/router'
 
 @Injectable()
 export class AuthService implements CanActivate {
@@ -13,10 +14,9 @@ export class AuthService implements CanActivate {
   auth: boolean
   token: string
   info: Object
-
   private static host = environment.url 
 
-  constructor(private http: Http ) {
+  constructor(private http: Http, private router: Router ) {
     this.auth  = false
     this.token = ""
     this.info  = {}
@@ -31,7 +31,10 @@ export class AuthService implements CanActivate {
    * @returns {boolean}
    */
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    return false
+    if (!this.auth) {
+      this.router.navigate(['/login'])
+    } 
+    return this.auth
   }
 
   login (user: string, password: string) {
@@ -49,11 +52,14 @@ export class AuthService implements CanActivate {
                 this.auth  = true
                 this.token = obj.token
                 this.info  = obj.user
+                // If pass, redirect to main page
+                this.router.navigate(['/aliases'])
             }
             return this.auth 
         },
         (err: Error) => {
             console.error('userService: ' + err)
+            return false
         })
     } 
     

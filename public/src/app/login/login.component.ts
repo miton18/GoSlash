@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, ControlGroup, Control } from '@angular/common';
 
 @Component({
   moduleId: module.id,
@@ -8,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(fb: FormBuilder) { }
 
   ngOnInit() {
+    let form = new ControlGroup({
+      userid: new Control(),
+      password: new Control()
+    })
   }
 
+  tryAuth() {
+
+  }
 }
