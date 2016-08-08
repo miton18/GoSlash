@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { MaterialInputComponent } from '../material-input';
+import { Alias } from '../alias.class';
 
 @Component({
   moduleId: module.id,
@@ -16,10 +16,10 @@ import { MaterialInputComponent } from '../material-input';
 })
 export class AliasNewComponent implements OnInit {
 
-  newAlias: Object
+  newAlias: Alias
 
   constructor() { 
-    this.newAlias = {}
+    this.newAlias = new Alias
   }
 
   ngOnInit() {

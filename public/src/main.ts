@@ -6,9 +6,11 @@ import { HTTP_PROVIDERS } from '@angular/http';
 import { AppComponent, environment } from './app/'
 import { provideRouter, RouterConfig } from '@angular/router';
 
-// App imports
+// App services imports
 import { AliasService, AliasServiceTest } from './app/alias.service';
-import {AliasListComponent} from './app/alias-list'
+import { AuthService } from './app/auth.service';
+// App view imports
+import { AliasListComponent } from './app/alias-list'
 import { LoginComponent } from './app/login';
 
 if (environment.production) {
@@ -16,17 +18,26 @@ if (environment.production) {
 }
 
 const APP_ROUTES: RouterConfig = [
-  { path: '', component: AliasListComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'aliases', component: AliasListComponent }    
+  { 
+    path: '', 
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  { 
+    path: 'login', 
+    component: LoginComponent 
+  },
+  { 
+    path: 'aliases', 
+    component: AliasListComponent,
+    canActivate: [AuthService] 
+  }
+  //{ path: '**', component: NotFoundComponent }    
 ];
 
 export const APP_ROUTER_PROVIDERS = [
   provideRouter(APP_ROUTES)
 ];
-
-
-
 
 
 bootstrap(AppComponent, [
@@ -39,5 +50,12 @@ bootstrap(AppComponent, [
   {
     provide: AliasService,
     useClass: environment.production ? AliasService : AliasServiceTest,
+  },
+  {
+    provide: AuthService,
+    useClass: AuthService
   }
 ])
+.catch(err => {
+  console.error("App failed to start", err)
+})

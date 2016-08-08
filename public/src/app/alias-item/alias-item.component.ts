@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import { Alias } from '../alias.class';
 
 @Component({
   moduleId: module.id,
@@ -9,7 +10,7 @@ import { Input } from '@angular/core';
 })
 export class AliasItemComponent implements OnInit {
   
-  @Input() alias: Object
+  @Input() alias: Alias
 
   constructor() { }
 

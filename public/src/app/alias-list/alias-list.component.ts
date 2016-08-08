@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { AliasService } from '../alias.service';
-import { AliasItemComponent } from '../alias-item/alias-item.component';
-import { AliasNewComponent } from '../alias-new';
+import { Component, OnInit } from '@angular/core'
+import { AliasService } from '../alias.service'
+import { AliasItemComponent } from '../alias-item/alias-item.component'
+import { AliasNewComponent } from '../alias-new'
+import { Alias } from '../alias.class'
 
 @Component({
   moduleId: module.id,
@@ -17,7 +18,7 @@ import { AliasNewComponent } from '../alias-new';
 })
 export class AliasListComponent implements OnInit {
 
-  aliases: Array<any>
+  aliases: Array<Alias>
 
   constructor(private aliasService: AliasService) {
       this.aliases = []
